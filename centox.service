@@ -1,0 +1,15 @@
+[Unit]
+Description=Forum
+ExecStart=/usr/bin/yarn start
+PartOf=forums.service
+
+[Service]
+ExecStart=/usr/bin/yarn start
+
+WorkingDirectory=/var/www/<centox_fqdn>/centox/
+User=www-data
+Group=www-data
+Environment=XXX=1234 YYY=5678
+
+[Install]
+WantedBy=multi-user.target
